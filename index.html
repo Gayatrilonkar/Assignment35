@@ -11,22 +11,42 @@
             object-fit: cover;
             display: block;
             margin: 20px auto;
+            border-radius: 10px;
         }
         .btn-container{
-            display: flex;
-            justify-content: center;
+            
+            
+            position: relative;
+            width: fit-content;
+            display: block;
+            margin: 10px auto;
         }
         .btn{
-            margin: 0 10px;
+            margin: 0 20px;
+            height: 60px;
+            cursor: pointer;
+           
+        }
+        .btn-left{
+            left: -78px;
+            top: 120px;
+            position: absolute;
+        }
+        .btn-right{
+            right: -75px;
+            top: 120px;
+            position: absolute;
+            height: 55px;
         }
        
     </style>
 </head>
 <body>
-    <img src="./gallery/biryani.jpeg" class="img" id="imgs">
     <div class="btn-container">
-    <button type="button" class="btn" onclick="prev()">previous</button>
-    <button type="button" class="btn" onclick="next()">next</button>
+        <img src="./gallery/biryani.jpeg" class="img" id="imgs">
+
+    <img src="left.png" type="button" class="btn btn-left" onclick="prev()"></button>
+    <img src="next.png" type="button" class="btn btn-right" onclick="next()"></button>
 </div>
     <script>
         const imagesArr =["./gallery/pizza.jpg",
