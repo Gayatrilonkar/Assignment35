@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery</title>
+    <style>
+        .img{
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+        }
+        .btn{
+            margin: 0 10px;
+        }
+       
+    </style>
 </head>
 <body>
+    <img src="./gallery/biryani.jpeg" class="img" id="imgs">
+    <div class="btn-container">
+    <button type="button" class="btn" onclick="prev()">previous</button>
+    <button type="button" class="btn" onclick="next()">next</button>
+</div>
+    <script>
+        const images =["./gallery/pizza.jpg",
+        "./gallery/briyani.jpej",
+        "./gallery/roll.jpeg",
+        "./gallery/sandwitch.jpeg"
+        ]
+        let imgIndex = 0;
+        function prev(){
+            if (imgIndex==0){
+            imgIndex = images.length-1;
+
+        }
+        else{
+            imgIndex--;
+
+        }
+        const imgElement = document.getElementById("imgs")
+    }
+        
+    </script>
+
     
 </body>
 </html>
